@@ -47,14 +47,14 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul>
-                                        <li class="top-hover"><a href="index.html">home</a>
-                                            <ul class="submenu">
+                                        <li class="top-hover"><a href="{{ url('/') }}">home</a>
+                                            {{-- <ul class="submenu">
                                                 <li><a href="index.html">home version 1</a></li>
                                                 <li><a href="index-2.html">home version 2</a></li>
-                                            </ul>
+                                            </ul> --}}
                                         </li>
-                                        <li><a href="about-us.html">about</a></li>
-                                        <li class="mega-menu-position top-hover"><a href="shop.html">shop</a>
+                                        <li><a href="{{ url('about-us') }}">about</a></li>
+                                        <li class="mega-menu-position top-hover"><a href="{{ url('shop') }}">shop</a>
                                             <ul class="mega-menu">
                                                 <li>
                                                     <ul>
@@ -102,45 +102,53 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="top-hover"><a href="blog-left-sidebar.html">blog</a>
+                                        <li class="top-hover"><a href="{{ url('blog-left-slidebar') }}">blog</a>
                                             <ul class="submenu">
-                                                <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                <li><a href="{{ url('blog-masonary') }}">Blog Masonry</a></li>
                                                 <li><a href="#">Blog Standard <span><i
                                                                 class="ion-ios-arrow-right"></i></span></a>
                                                     <ul class="lavel-menu">
-                                                        <li><a href="blog-left-sidebar.html">left sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">right sidebar</a></li>
-                                                        <li><a href="blog-no-sidebar.html">no sidebar</a></li>
+                                                        <li><a href="{{ url('blog-left-slidebar') }}">left sidebar</a>
+                                                        </li>
+                                                        <li><a href="{{ url('blog-right-slidebar') }}">right
+                                                                sidebar</a></li>
+                                                        <li><a href="{{ url('blog-no-slidebar') }}">no sidebar</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Post Types <span><i
                                                                 class="ion-ios-arrow-right"></i></span> </a>
                                                     <ul class="lavel-menu">
-                                                        <li><a href="blog-details-standerd.html">Standard post</a></li>
-                                                        <li><a href="blog-details-audio.html">audio post</a></li>
-                                                        <li><a href="blog-details-video.html">video post</a></li>
-                                                        <li><a href="blog-details-gallery.html">gallery post</a></li>
-                                                        <li><a href="blog-details-link.html">link post</a></li>
-                                                        <li><a href="blog-details-quote.html">quote post</a></li>
+                                                        <li><a href="{{ url('blog-details-standerd') }}">Standard
+                                                                post</a></li>
+                                                        <li><a href="{{ url('blog-details-audio') }}">audio post</a>
+                                                        </li>
+                                                        <li><a href="{{ url('blog-details-video') }}">video post</a>
+                                                        </li>
+                                                        <li><a href="{{ url('blog-details-gallery') }}">gallery
+                                                                post</a></li>
+                                                        <li><a href="{{ url('blog-details-link') }}">link post</a>
+                                                        </li>
+                                                        <li><a href="{{ url('blog-details-quote') }}">quote post</a>
+                                                        </li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="top-hover"><a href="#">pages</a>
                                             <ul class="submenu">
-                                                <li><a href="about-us.html">about us </a></li>
-                                                <li><a href="shop.html">shop Grid</a></li>
-                                                <li><a href="shop-list.html">shop list</a></li>
-                                                <li><a href="product-details.html">product details</a></li>
-                                                <li><a href="cart-page.html">cart page</a></li>
-                                                <li><a href="checkout.html">checkout</a></li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="my-account.html">my account</a></li>
-                                                <li><a href="login-register.html">login / register</a></li>
-                                                <li><a href="contact.html">contact</a></li>
+                                                <li><a href="{{ url('about-us') }}">about us </a></li>
+                                                <li><a href="{{ url('shop') }}">shop Grid</a></li>
+                                                <li><a href="{{ url('shop-list') }}">shop list</a></li>
+                                                <li><a href="{{ url('product-details') }}">product details</a></li>
+                                                <li><a href="{{ url('cart-page') }}">cart page</a></li>
+                                                <li><a href="{{ url('checkout') }}">checkout</a></li>
+                                                <li><a href="{{ url('wishlist') }}">wishlist</a></li>
+                                                <li><a href="{{ url('my-account') }}">my account</a></li>
+                                                <li><a href="{{ url('login-register') }}">login / register</a></li>
+                                                <li><a href="{{ url('contact') }}">contact</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="{{ url('contact') }}">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -198,8 +206,8 @@
                                         <h4>Total : <span class="shop-total">$260.00</span></h4>
                                     </div>
                                     <div class="shopping-cart-btn">
-                                        <a href="cart-page.html">view cart</a>
-                                        <a href="checkout.html">checkout</a>
+                                        <a href="{{ url('cart-page') }}">view cart</a>
+                                        <a href="{{ url('checkout') }}">checkout</a>
                                     </div>
                                 </div>
                             </div>
@@ -427,16 +435,20 @@
                             <!-- Thumbnail Large Image start -->
                             <div class="tab-content">
                                 <div id="pro-1" class="tab-pane fade show active">
-                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l1.jpg') }}"
+                                        alt="">
                                 </div>
                                 <div id="pro-2" class="tab-pane fade">
-                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l2.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l2.jpg') }}"
+                                        alt="">
                                 </div>
                                 <div id="pro-3" class="tab-pane fade">
-                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l3.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l3.jpg') }}"
+                                        alt="">
                                 </div>
                                 <div id="pro-4" class="tab-pane fade">
-                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l4.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/client/img/product-details/product-detalis-l4.jpg') }}"
+                                        alt="">
                                 </div>
                             </div>
                             <!-- Thumbnail Large Image End -->
